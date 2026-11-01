@@ -3,8 +3,8 @@
 # Project: ShopAgent (Semana AI Data Engineer)
 
 version: "2.0"
-last_updated: "2026-04-12"
-last_domain_added: shadowtraffic
+last_updated: "2026-11-01"
+last_domain_added: pandas
 
 # File Size Limits (SINGLE SOURCE OF TRUTH)
 limits:
@@ -229,3 +229,118 @@ domains:
     specs:
       - name: shadowtraffic-config
         path: specs/shadowtraffic-config.yaml
+
+  # mcp_validated: checked against official docs by WebFetch; Context7/Exa were unavailable
+  streamlit:
+    name: Streamlit
+    description: "E-commerce dashboard in Streamlit -- multipage app, cached Postgres reads, filters, KPI cards, theming — v1.66.0"
+    path: streamlit/
+    mcp_validated: "2026-11-01"
+    status: complete
+    agents:
+      - python-developer
+      - code-reviewer
+    entry_points:
+      index: index.md
+      quick_reference: quick-reference.md
+    concepts:
+      - name: multipage-apps
+        path: concepts/multipage-apps.md
+        confidence: 0.95
+      - name: caching
+        path: concepts/caching.md
+        confidence: 0.95
+      - name: connections
+        path: concepts/connections.md
+        confidence: 0.95
+      - name: session-state
+        path: concepts/session-state.md
+        confidence: 0.95
+      - name: layout
+        path: concepts/layout.md
+        confidence: 0.95
+      - name: theming
+        path: concepts/theming.md
+        confidence: 0.95
+    patterns:
+      - name: data-access-layer
+        path: patterns/data-access-layer.md
+      - name: sidebar-filters
+        path: patterns/sidebar-filters.md
+      - name: kpi-cards
+        path: patterns/kpi-cards.md
+      - name: error-empty-states
+        path: patterns/error-empty-states.md
+
+  # mcp_validated: checked against official docs by WebFetch; Context7/Exa were unavailable
+  plotly:
+    name: Plotly
+    description: "Dashboard charts with Plotly -- Express vs graph_objects, KPI chart choice, pt-BR formatting, Streamlit rendering — v7.1.0"
+    path: plotly/
+    mcp_validated: "2026-11-01"
+    status: complete
+    agents:
+      - python-developer
+      - code-reviewer
+    entry_points:
+      index: index.md
+      quick_reference: quick-reference.md
+    concepts:
+      - name: express-vs-graph-objects
+        path: concepts/express-vs-graph-objects.md
+        confidence: 0.95
+      - name: chart-selection
+        path: concepts/chart-selection.md
+        confidence: 0.90
+      - name: pt-br-formatting
+        path: concepts/pt-br-formatting.md
+        confidence: 0.90
+      - name: streamlit-integration
+        path: concepts/streamlit-integration.md
+        confidence: 0.95
+    patterns:
+      - name: shared-layout-helper
+        path: patterns/shared-layout-helper.md
+      - name: time-series-chart
+        path: patterns/time-series-chart.md
+      - name: ranking-bar-chart
+        path: patterns/ranking-bar-chart.md
+      - name: category-breakdown
+        path: patterns/category-breakdown.md
+
+  # mcp_validated: checked against official docs by WebFetch; Context7/Exa were unavailable
+  pandas:
+    name: pandas
+    description: "Postgres data for the dashboard -- read_sql with binds, dtypes, epoch datetimes, resampling, KPI aggregation, pt-BR display — v3.1.0"
+    path: pandas/
+    mcp_validated: "2026-11-01"
+    status: complete
+    agents:
+      - python-developer
+      - code-reviewer
+    entry_points:
+      index: index.md
+      quick_reference: quick-reference.md
+    concepts:
+      - name: read-sql
+        path: concepts/read-sql.md
+        confidence: 0.95
+      - name: dtypes
+        path: concepts/dtypes.md
+        confidence: 0.95
+      - name: epoch-datetimes
+        path: concepts/epoch-datetimes.md
+        confidence: 0.95
+      - name: time-resampling
+        path: concepts/time-resampling.md
+        confidence: 0.95
+      - name: sql-vs-pandas
+        path: concepts/sql-vs-pandas.md
+        confidence: 0.90
+    patterns:
+      - name: parameterized-queries
+        path: patterns/parameterized-queries.md
+      - name: kpi-aggregations
+        path: patterns/kpi-aggregations.md
+      - name: ptbr-display-formatting
+        path: patterns/ptbr-display-formatting.md

@@ -2,6 +2,7 @@
 
 > Fast lookup tables. For code examples, see linked files.
 > **MCP Validated**: 2026-11-01 (official docs via WebFetch; Context7/Exa unavailable)
+> **Build Confirmed**: 2026-11-02 (Streamlit 1.66.1, Plotly 7.1.0, pandas 3.1.0, in the browser)
 
 ## Core Signatures (1.66.0)
 
@@ -11,7 +12,7 @@
 | `st.cache_resource` | `ttl, max_entries, validate, on_release, scope` | Returns one shared object, which must be thread-safe |
 | `st.connection` | `name, type, max_entries, ttl, **kwargs` | Kwargs override `secrets.toml` |
 | `conn.query` | `sql, *, ttl, params, show_spinner, chunksize` | Binds `:name`; default `ttl=None` caches forever |
-| `st.metric` | `label, value, delta, delta_color, border, chart_data, delta_description` | `value` may be a preformatted `str` |
+| `st.metric` | `label, value, delta, delta_color, border, chart_data, delta_arrow, delta_description` | `value` may be a preformatted `str` |
 | `st.columns` | `spec, *, gap, vertical_alignment, border, width, wrap` | `gap` runs from `"xxsmall"` to `"xxlarge"` |
 | `st.tabs` | `tabs, *, default, key, on_change, bind` | All tabs compute by default |
 | `st.date_input` | `value, min_value, max_value, format, key, bind, persist_state` | Range value returns a tuple of 0-2 dates |
@@ -31,8 +32,8 @@
 
 | Option | Works with `pages/` | Use |
 |--------|---------------------|-----|
-| `persist_state="session"` + same `key` | Yes | Default for this repo |
-| Widgets in the `st.navigation` entrypoint | No | Docs' preferred option, needs a router entrypoint |
+| `persist_state="session"` + same `key` | Yes | Not used here |
+| Widgets in the `st.navigation` entrypoint | No | Default for this repo; confirmed across pages |
 | Dummy `_key` copied in a callback | Yes | Only if `persist_state` cannot be used |
 | `bind="query-params"` | Yes | Shareable filtered URLs |
 
@@ -58,6 +59,8 @@
 | Cache a raw psycopg2 connection | Cache a pooled SQLAlchemy engine |
 | Set a widget's value after it renders | Change it in a callback |
 | Unpack a date range blindly | Check `len(period) == 2` |
+| Inline `<svg>` in `st.html` | The sanitizer strips it; use a base64 `<img>` |
+| Rely on wheel zoom defaults | Set `scrollZoom: False`, or charts capture page scrolling |
 | `format="localized"` for pt-BR | Format in Python; it follows the browser locale |
 | Commit `.streamlit/secrets.toml` | Use `.env`; it is ignored by git |
 | `streamlit run app/Home.py` with `from src...` | Run from the root with `python -m streamlit run` |

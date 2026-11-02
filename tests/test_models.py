@@ -1,4 +1,4 @@
-"""ShopAgent — Pydantic validation tests for Day 1 models."""
+"""Pydantic validation tests for the entity models."""
 
 from decimal import Decimal
 from uuid import uuid4
@@ -6,7 +6,7 @@ from uuid import uuid4
 import pytest
 from pydantic import ValidationError
 
-from models import Customer, Order, Product, Review
+from src.models import Customer, Order, Product, Review
 
 
 def test_valid_order():

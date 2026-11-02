@@ -1,0 +1,10 @@
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "dark"
+primaryColor = "#3987e5"
+backgroundColor = "#0a0f1c"
+secondaryBackgroundColor = "#141d30"
+textColor = "#f0f3f8"
+font = "'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif"

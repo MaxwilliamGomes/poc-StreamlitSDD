@@ -65,9 +65,8 @@ def orders_by_status(by_status: pd.DataFrame) -> go.Figure:
 
 ## Data Caveat
 
-Orders currently span about 8 minutes, so a daily line has a single point. Until
-`shadowtraffic.json` spreads dates over a longer period, use hourly or minute buckets for development.
-Otherwise a correct chart looks broken.
+The source data in `raw_orders` spans about 8 minutes. `src/prepare_data.py` spreads orders over 12
+months, so daily, weekly, and monthly buckets all work on the prepared tables.
 
 ## Fixed Category Order
 

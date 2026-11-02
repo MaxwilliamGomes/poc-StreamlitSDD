@@ -99,7 +99,7 @@ def render_sidebar_filters() -> Filters:
 | Same widget on each page | Call the helper with the same arguments; the docs require identical widgets |
 | Date limits | Default `min_value`/`max_value` span 10 years around the initial value |
 | Changing `format` | Resets the widget even with a `key` |
-| Current data | Orders span about 8 minutes, so anchor the default on the data until dates are spread |
+| Default period | This repo anchors it on `MIN`/`MAX` of `created_at`, from a cached query |
 
 Anchoring the default on the data: pass `max(created_at)` from a cached query instead of
 `date.today()`, so the first screen is not empty.

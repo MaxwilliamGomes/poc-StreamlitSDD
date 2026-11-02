@@ -32,3 +32,6 @@ presentation/html-to-pdf.mjs
 presentation/package-lock.json
 
 presentation/package.json
+
+# Streamlit
+.streamlit/secrets.toml

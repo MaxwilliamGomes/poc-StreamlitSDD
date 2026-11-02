@@ -32,6 +32,7 @@
 | Goal | Setting |
 |------|---------|
 | `1.234,56` separators | `fig.update_layout(separators=",.")` |
+| Count axis `2.500` | `tickformat=",d"`; the default format prints `2500` |
 | Currency in hover | `"R$ %{y:,.2f}"` |
 | Axis currency | `tickprefix="R$ ", tickformat=",.0f"` |
 | Percent | `"%{y:.1%}"` for a 0-1 fraction |

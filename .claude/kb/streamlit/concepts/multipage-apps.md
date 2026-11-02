@@ -76,9 +76,8 @@ under a plain `streamlit run app/Home.py`.
 | Filters across pages | `persist_state="session"` | Entrypoint widgets, the docs' preferred option |
 | Sections, top nav | No | `dict` of sections, `position="top"` |
 
-This repo plans `app/Home.py` + `app/pages/`, so that is the default. Move to `st.navigation` if the
-app needs sections or top navigation. Then `Home.py` becomes a router and the overview content
-moves to its own page. Calling `st.navigation` in any session makes Streamlit ignore `pages/` in all
+This repo uses `st.navigation`: `app/Home.py` is the router, draws the filters once, and the overview
+lives in `app/pages/visao_geral.py`. Calling `st.navigation` in any session makes Streamlit ignore `pages/` in all
 sessions until the server restarts, so do not mix the two.
 
 ## Common Mistakes

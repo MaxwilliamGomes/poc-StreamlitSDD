@@ -84,8 +84,8 @@ def load_filter_options() -> dict[str, list[str]]:
     return queries.filter_options(get_engine())
 ```
 
-The example assumes `orders.created_at` is `bigint` epoch milliseconds. Confirm the real type first,
-because `init.sql` declares `TIMESTAMPTZ`. See [Epoch Datetimes](../../pandas/concepts/epoch-datetimes.md).
+The example shows the old `bigint` epoch column. This repo now has `TIMESTAMPTZ`: bind timezone-aware
+bounds, as `src/queries.py` does. See [Epoch Datetimes](../../pandas/concepts/epoch-datetimes.md).
 
 ## Configuration
 

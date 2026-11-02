@@ -2,7 +2,8 @@
 
 > **Purpose**: Show currency, numbers, and dates in pt-BR across axes, labels, and hover text
 > **Confidence**: 0.90
-> **MCP Validated**: 2026-11-01 (plotly.js source and official docs read; not rendered in a browser)
+> **MCP Validated**: 2026-11-01 (plotly.js source and official docs read)
+> **Build Confirmed**: 2026-11-02 (Streamlit 1.66.1, Plotly 7.1.0, pandas 3.1.0, in the browser)
 
 ## Overview
 

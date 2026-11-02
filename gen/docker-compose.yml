@@ -1,5 +1,4 @@
-# ShopAgent — Docker infrastructure (Postgres + ShadowTraffic)
-# Semana AI Data Engineer 2026 — Days 1-3 (100% local)
+# ShopAgent Dashboard: Postgres. The optional shadowtraffic service needs a license.
 
 services:
   postgres:
@@ -9,9 +8,8 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-shopagent}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-shopagent}
     ports:
-      - "5432:5432"
+      - "${POSTGRES_PORT:-55432}:5432"
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-shopagent}"]

@@ -1,7 +1,8 @@
 # Shared Layout Helper
 
 > **Purpose**: Give every chart the same layout, pt-BR separators, hover text, and toolbar
-> **MCP Validated**: 2026-11-01 (official docs and Streamlit/plotly.js source; not rendered in a browser)
+> **MCP Validated**: 2026-11-01 (official docs and Streamlit/plotly.js source)
+> **Build Confirmed**: 2026-11-02 (Streamlit 1.66.1, Plotly 7.1.0, pandas 3.1.0, in the browser)
 
 ## When to Use
 

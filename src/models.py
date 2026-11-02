@@ -1,4 +1,4 @@
-"""ShopAgent — Pydantic models for the 4 core entities."""
+"""Pydantic models for the four dashboard entities."""
 
 from datetime import datetime
 from decimal import Decimal
@@ -21,6 +21,7 @@ class Product(BaseModel):
     product_id: UUID
     name: str
     category: str
+    macro_category: str | None = None
     price: Decimal = Field(gt=0)
     brand: str | None = None
 

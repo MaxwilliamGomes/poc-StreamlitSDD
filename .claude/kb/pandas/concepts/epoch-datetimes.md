@@ -6,9 +6,9 @@
 
 ## Overview
 
-`gen/init.sql` declares `orders.created_at` as `TIMESTAMPTZ`, but the running database has it as
-`bigint` epoch milliseconds. Check the real type first, because it changes both the filter and the
-conversion. Store and compare in UTC or epoch, convert to `America/Sao_Paulo` for grouping, and drop the
+Since 2026-11-02, `src/prepare_data.py` gives `orders.created_at` the `TIMESTAMPTZ` type. The `bigint`
+epoch form survives only in `raw_orders`. Check the real type first, because it changes both the
+filter and the conversion. Store and compare in UTC or epoch, convert to `America/Sao_Paulo` for grouping, and drop the
 time zone only just before charting.
 
 ## The Pattern

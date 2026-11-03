@@ -59,7 +59,7 @@ spec/
   agents/                 # Subagentes
   commands/               # Comandos customizados
   sdd/                    # Documentos SDD do dia 4 (referência)
-  skills/                 # clarify, colorize, critique, distill, layout
+  skills/                 # clarify, colorize, critique, distill, layout e poc-* (abaixo)
 ```
 
 ## Modelo de dados
@@ -128,6 +128,15 @@ Comandos: `/sdd:brainstorm`, `/sdd:define`, `/sdd:design`, `/sdd:build` e `/sdd:
 `.claude/commands/sdd/`. Use `spec/_exemplo-multi-agent/` e `.claude/sdd/` como referência de formato.
 O brainstorm lê `docs/`, quando existir, e o design usa `docs/referencias-visuais/` e a identidade
 visual.
+
+Skills de apoio, adaptadas das skills de Power BI do usuário:
+
+| Etapa | Skill | Saída |
+|-------|-------|-------|
+| Antes do brainstorm | `poc-requirements` | `docs/levantamento-requisitos/` |
+| Design | `poc-visual-system` (regras de página) e `poc-mockup` | `spec/<feature>/mockup/` |
+| Antes do ship | `poc-qa` | `spec/<feature>/qa.md` |
+| Entrega | `poc-documentation` | `docs/documentacao/*.docx` |
 
 ## Agentes e comandos
 

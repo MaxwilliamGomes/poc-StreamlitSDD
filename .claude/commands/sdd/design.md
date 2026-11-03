@@ -24,6 +24,7 @@ Fase 3 de 5: brainstorm → define → **design** → build → ship.
 ## Passos
 
 1. Leia o define, `.claude/CLAUDE.md` e as KBs `streamlit`, `plotly`, `pandas` e `testing`.
+   Quando existirem, abra também `docs/referencias-visuais/` e a identidade visual em `docs/`.
 2. Liste o que pode ser reaproveitado do código atual.
 3. Para cada página, defina a pergunta respondida, os filtros, os KPIs, os gráficos e os estados
    de carregamento, vazio e erro.

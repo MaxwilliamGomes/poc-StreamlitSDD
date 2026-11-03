@@ -126,6 +126,8 @@ Cada funcionalidade tem sua pasta em `spec/<nome>/`, com arquivos `01-brainstorm
 
 Comandos: `/sdd:brainstorm`, `/sdd:define`, `/sdd:design`, `/sdd:build` e `/sdd:ship`, definidos em
 `.claude/commands/sdd/`. Use `spec/_exemplo-multi-agent/` e `.claude/sdd/` como referência de formato.
+O brainstorm lê `docs/`, quando existir, e o design usa `docs/referencias-visuais/` e a identidade
+visual.
 
 ## Agentes e comandos
 

@@ -20,20 +20,30 @@ Fase 3 de 5: brainstorm → define → **design** → build → ship.
 - Exige `spec/<feature>/02-define.md` com clarity score de pelo menos 12/15.
 - Não escreva código de aplicação nesta fase. Não faça commit.
 - Dúvidas abertas que afetem o design precisam ser resolvidas com o usuário antes.
+- Carregue as skills `poc-visual-system` e `dataviz` antes de definir páginas e gráficos.
+  Não escolha forma nem cor de gráfico sem elas.
 
 ## Passos
 
 1. Leia o define, `.claude/CLAUDE.md` e as KBs `streamlit`, `plotly`, `pandas` e `testing`.
    Quando existirem, abra também `docs/referencias-visuais/` e a identidade visual em `docs/`.
-2. Liste o que pode ser reaproveitado do código atual.
-3. Para cada página, defina a pergunta respondida, os filtros, os KPIs, os gráficos e os estados
-   de carregamento, vazio e erro.
-4. Associe cada KPI a uma query de `src/queries.py`. Decida o que agrega no SQL e o que fica no
+2. Carregue a skill `poc-visual-system` e o catálogo
+   `.claude/skills/poc-mockup/references/catalogo-visuais.md`.
+3. Liste o que pode ser reaproveitado do código atual.
+4. Para cada página, defina o arquétipo, a pergunta respondida, os filtros, os KPIs, os gráficos,
+   as interações e os estados de carregamento, vazio e erro. Use o catálogo: visual permitido,
+   técnica com status (existe, parcial, nova) e o que o Streamlit não faz.
+5. Carregue a skill `dataviz`, escolha a forma de cada gráfico e valide a paleta com o
+   `validate_palette.js` nos modos que o app oferece. Registre o resultado.
+6. Associe cada KPI a uma query de `src/queries.py`. Decida o que agrega no SQL e o que fica no
    pandas.
-5. Registre as decisões técnicas com alternativas e motivo.
-6. Monte o manifesto de arquivos, indicando dependências e agente responsável.
-7. Associe cada critério de aceite a um teste ou verificação manual.
-8. Apresente as decisões para revisão.
+7. Pergunte ao usuário se o cliente precisa aprovar um mockup antes do build. Se sim, rode a skill
+   `poc-mockup` e use `spec/<feature>/mockup/mapa-construcao.md` como contrato das páginas. Se
+   não, registre a decisão.
+8. Registre as decisões técnicas com alternativas e motivo.
+9. Monte o manifesto de arquivos, indicando dependências e agente responsável.
+10. Associe cada critério de aceite a um teste ou verificação manual.
+11. Apresente as decisões para revisão.
 
 ## Regras de arquitetura
 
@@ -51,7 +61,11 @@ Fase 3 de 5: brainstorm → define → **design** → build → ship.
 ## Arquitetura
 ## Páginas
 ### <página>
-Pergunta, filtros, KPIs, gráficos, estados
+Arquétipo, pergunta, filtros, KPIs, gráficos, interações, estados
+## Visual
+Tema, paleta validada (resultado do validador), técnicas do catálogo e limites aceitos
+## Mockup
+Link para `mockup/mapa-construcao.md` e status da aprovação, ou o motivo de não haver mockup
 ## Queries
 | Query | KPIs | Parâmetros | Colunas retornadas |
 ## Decisões

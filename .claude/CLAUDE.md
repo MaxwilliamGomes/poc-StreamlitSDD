@@ -135,7 +135,7 @@ Skills de apoio, adaptadas das skills de Power BI do usuário:
 |-------|-------|-------|
 | Antes do brainstorm | `poc-requirements` | `docs/levantamento-requisitos/` |
 | Design | `poc-visual-system` (regras de página) e `poc-mockup` | `spec/<feature>/mockup/` |
-| Antes do ship | `poc-qa` | `spec/<feature>/qa.md` |
+| Antes do ship (obrigatória) | `poc-qa` | `spec/<feature>/qa.md` |
 | Entrega | `poc-documentation` | `docs/documentacao/*.docx` |
 
 ## Agentes e comandos

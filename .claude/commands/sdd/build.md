@@ -70,4 +70,5 @@ Use apenas `aprovado`, `falhou` ou `não verificado` em cada critério.
 ## Saída
 
 Informe o que foi implementado, os resultados reais dos testes e o que falhou ou não foi verificado.
-Próximo comando: `/sdd:ship <feature>`, somente se todos os critérios obrigatórios passarem.
+Próximos passos, somente se todos os critérios obrigatórios passarem: skill `poc-qa`, que grava
+`spec/<feature>/qa.md`, e depois `/sdd:ship <feature>`.

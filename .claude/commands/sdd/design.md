@@ -22,6 +22,8 @@ Fase 3 de 5: brainstorm → define → **design** → build → ship.
 - Dúvidas abertas que afetem o design precisam ser resolvidas com o usuário antes.
 - Carregue as skills `poc-visual-system` e `dataviz` antes de definir páginas e gráficos.
   Não escolha forma nem cor de gráfico sem elas.
+- Cumpra o nível de ambição visual do define. Não troque uma técnica exigida por uma mais simples
+  sem registrar o motivo e obter o aceite do usuário.
 
 ## Passos
 
@@ -33,16 +35,23 @@ Fase 3 de 5: brainstorm → define → **design** → build → ship.
 4. Para cada página, defina o arquétipo, a pergunta respondida, os filtros, os KPIs, os gráficos,
    as interações e os estados de carregamento, vazio e erro. Use o catálogo: visual permitido,
    técnica com status (existe, parcial, nova) e o que o Streamlit não faz.
+   Declare também:
+   - **Destaque:** o elemento que deve impressionar e a pergunta que ele responde.
+   - **Técnicas do Bloco E:** as escolhidas, com status, no mínimo exigido pelo nível de ambição.
+     Abaixo do mínimo, justifique por que a página não precisa delas.
+   - **Critérios visuais:** quais `CA-V` do define a página atende.
 5. Carregue a skill `dataviz`, escolha a forma de cada gráfico e valide a paleta com o
    `validate_palette.js` nos modos que o app oferece. Registre o resultado.
 6. Associe cada KPI a uma query de `src/queries.py`. Decida o que agrega no SQL e o que fica no
    pandas.
-7. Pergunte ao usuário se o cliente precisa aprovar um mockup antes do build. Se sim, rode a skill
-   `poc-mockup` e use `spec/<feature>/mockup/mapa-construcao.md` como contrato das páginas. Se
-   não, registre a decisão.
+7. No nível vitrine, o mockup é obrigatório. Nos demais, pergunte ao usuário se o cliente precisa
+   aprovar um mockup antes do build. Se sim, rode a skill `poc-mockup` e use
+   `spec/<feature>/mockup/mapa-construcao.md` como contrato das páginas. Se não, registre a
+   decisão.
 8. Registre as decisões técnicas com alternativas e motivo.
 9. Monte o manifesto de arquivos, indicando dependências e agente responsável.
-10. Associe cada critério de aceite a um teste ou verificação manual.
+10. Associe cada critério de aceite, inclusive os visuais (`CA-V`), a um teste ou verificação
+    manual no navegador.
 11. Apresente as decisões para revisão.
 
 ## Regras de arquitetura
@@ -61,9 +70,11 @@ Fase 3 de 5: brainstorm → define → **design** → build → ship.
 ## Arquitetura
 ## Páginas
 ### <página>
-Arquétipo, pergunta, filtros, KPIs, gráficos, interações, estados
+Arquétipo, pergunta, destaque, técnicas do Bloco E (com status), critérios visuais atendidos,
+filtros, KPIs, gráficos, interações, estados
 ## Visual
-Tema, paleta validada (resultado do validador), técnicas do catálogo e limites aceitos
+Nível de ambição, tema, paleta validada (resultado do validador), técnicas do catálogo e limites
+aceitos
 ## Mockup
 Link para `mockup/mapa-construcao.md` e status da aprovação, ou o motivo de não haver mockup
 ## Queries
